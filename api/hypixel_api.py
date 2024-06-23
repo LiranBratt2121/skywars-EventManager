@@ -24,9 +24,6 @@ class MinecraftStatsFetcher:
             return response.json()['id']
         raise Exception(f"Failed to get UUID for username: {username}")
 
-    def print_last_game_stats(self, skywars_data: Dict) -> None:
-        ...
-
     def __get_player_hypixel_url_creds(self, uuid: str) -> str:
         return f'{MinecraftStatsFetcher.HYPIXEL_PATH}?key={MinecraftStatsFetcher.HYPIXEL_API_KEY}&uuid={uuid}'
 
